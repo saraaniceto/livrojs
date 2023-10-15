@@ -1,0 +1,11 @@
+<!-- Elaborar um programa para uma loja, o qual leia o preço de um produto e informe as opções de pagamento da loja. Calcule e informe o valor para pagamento à vista com 10% de desconto e o valor em 3x. -->
+
+<script>
+    // lê o preço do produto
+    let preço = Number(prompt('Informe o valor do produto.'))
+    // calcula as opções de pagamento
+    let aVista = preço * 0.9
+    let parcela = preço / 3
+    // exibe as opções de pagamento
+    alert('O valor total do pedido é: R$' + preço.toFixed(2) + '\nÀ vista: R$' + aVista.toFixed(2) + '\nOu 3x de R$' + parcela.toFixed(2))
+</script>

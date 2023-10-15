@@ -1,0 +1,12 @@
+<!-- Elaborar um programa para uma pizzaria, o qual leia o valor total de uma conta e quantos clientes vão pagá-la. Calcule e informe o valor a ser pago por cliente. -->
+
+<script>
+    // lê o total da conta
+    let total = prompt('Informe o valor total da conta.')
+    // lê quantos clientes vão pagá-la
+    let clientes = prompt('Informe quantas pessoas vão dividir a conta')
+    // calcula o resultado
+    let totalCliente = total / clientes
+    // exibe o resultado
+    alert('Valor da conta: R$ ' + total + '\nNúmero de clientes: ' + clientes + '\nValor por cliente: R$ ' + totalCliente.toFixed(2))
+</script>

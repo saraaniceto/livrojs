@@ -1,0 +1,49 @@
+<!-- No exemplo do livro o autor resolve o exercício considerando a hora como um número decimal do formato hh.mm logo a adição se dá apenas à parte inteira da hora e não há a necessidade de criar as substrings pra separar horas e minutos como eu fiz no ex3_4.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Exemplo 3.4</title>
+</head>
+<body>
+<h1>Programa Fuso Horário</h1>
+<p>Hora no Brasil (h.m):
+<input type="text" id="inHoraBrasil">
+</p>
+<p>
+<input type="button" value="Exibir Hora na França" id="btExibir">
+</p>
+<h3 id="outHoraFranca"></h3>
+<script>
+function calcularFuso() {
+// cria uma referência aos elementos da página
+var inHoraBrasil = document.getElementById("inHoraBrasil");
+var outHoraFranca = document.getElementById("outHoraFranca");
+// obtém e converte o conteúdo do campo inHoraBrasil
+var horaBrasil = Number(inHoraBrasil.value);
+// se não preencheu ou Not-a-Number (NaN)
+if (inHoraBrasil.value == "" || isNaN(horaBrasil)) {
+alert("Informe a hora no Brasil corretamente"); // exibe alerta
+inHoraBrasil.focus(); // posiciona em inHoraBrasil
+return;
+}
+var horaFranca = horaBrasil + 5; // calcula o horário na França
+// se passar das 24 horas na Franca ...
+if (horaFranca > 24) {
+horaFranca = horaFranca - 24; // ... subtrai 24
+}
+// exibe resposta (altera conteúdo do elemento outHoraFranca)
+outHoraFranca.textContent = "Hora na França: " +
+horaFranca.toFixed(2);
+}
+// cria uma referência ao elemento btExibir e registra evento associado a function
+var btExibir = document.getElementById("btExibir");
+btExibir.addEventListener("click", calcularFuso);
+
+</script>
+</body>
+</html>
+

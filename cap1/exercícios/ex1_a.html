@@ -1,0 +1,11 @@
+<!-- Elaborar um programa que leia um número. Calcule e informe os seus vizinhos, ou seja, o número anterior e posterior. -->
+
+<script>
+    //Lê o número e converte para Number pois vamos usar operações de soma (para calcular o posterior) e assim evitamos que seja realizada a concatenação.
+    let num = Number(prompt("Digite um número:"))
+    // Calcula os resultados
+    let anterior = num - 1
+    let posterior = num + 1
+    // Exibe os resultados
+    alert(`O número escolhido foi ${num}. Seu anterior é ${anterior} e seu posterior é ${posterior}.`)
+</script>
