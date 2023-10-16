@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4.b</title>
+</head>
+<body>
+    <h1>Programa Criação de Chinchilas</h1>
+    <p>
+        <label for="chinchilas">N° de Chinchilas:</label>
+        <input type="number" id="chinchilas">
+    </p>
+    <p>
+        <label for="anos">N° de Anos:</label>
+        <input type="number" id="anos">
+    </p>
+    <input type="button" value="Mostrar Previsão de Chinchilas" onclick="prever()">
+    <p id="res"></p>
+
+    <script>
+        function prever(){
+            let chinchilas = document.getElementById('chinchilas').value
+            let anos = document.getElementById('anos').value
+            let res = document.getElementById('res')
+            res.innerText = ""
+
+            if (chinchilas < 2 || isNaN(chinchilas) || anos == 0 || isNaN(anos)){
+                alert('Digite os valores corretamente')
+            }
+
+            let previsao = `1° ano: ${chinchilas} chinchilas`
+            for (let i = 2; i <= anos; i++){
+                chinchilas = chinchilas * 3
+                previsao += `\n${i}° ano: ${chinchilas} chinchilas`
+            } 
+            res.innerText = previsao
+        }
+    </script>
+</body>
+</html>

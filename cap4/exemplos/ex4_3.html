@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 4.3</title>
+</head>
+<body>
+    <script>
+        // Recebe o input, valida e repete a solicitação do input caso o número seja inválido
+        let num = Number(prompt('Digite um número: '))
+        do {
+        if (num == 0 || isNaN(num)) {
+            alert('Digite um número válido.')
+        }
+        } while (num == 0 || isNaN(num))
+        //Declara a string que vai receber os pares
+        let pares = `Pares entre 1 e ${num}: `
+        //Isola o número 2 para evitar uma vírgula desnecessária no final
+        if (num > 1){
+            pares += '2'
+        }
+        //Repetição para checar os pares
+        for (let i = 4; i <= num; i = i + 2){
+            pares += `, ${i}`
+        }
+        //Exibe a lista de pares
+        alert(pares)        
+    </script>
+</body>
+</html>

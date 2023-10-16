@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo 4.4</title>
+</head>
+<body>
+    <script>
+        //Alerta sobre a execução do programa
+        alert('Digite 0 para sair')
+        
+        do{
+            let num = Number(prompt('Digite um número'))
+            // Verifica o input do usuário
+            if (num == 0 || isNaN(num)){
+                let exit = confirm('Confima saída?')
+                if (exit) break
+                continue
+            }
+
+            if (num % 2 == 0){
+                alert(`O dobro de ${num} é: ${num*2}`)
+            } else {
+                alert(`O triplo de ${num} é: ${num*3}`)
+            }
+        } while (true)
+
+        alert('Programa encerrado.')
+
+    </script>
+</body>
+</html>

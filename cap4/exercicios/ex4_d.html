@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4.d</title>
+</head>
+<body>
+    <h1>Fábrica de Estrelas</h1>
+    <label for="linhas">Número de Linhas: </label>
+    <input type="number" id="linhas">
+    <input type="button" value="Criar Estrelas" onclick="criar()">
+    <div id="estrelas"></div>
+
+    <script>
+        function criar(){
+            let linhas = document.getElementById('linhas').value
+            let estrelas = document.querySelector('div#estrelas')
+            if (linhas == 0 || isNaN(linhas)){
+                alert('Digite o número de linhas')
+            }
+            let numEstrelas = ''
+            let linhasEstrelas = ''
+            let i = 0                       
+            do {
+                numEstrelas += `\u2B50`
+                linhasEstrelas += `<br>${numEstrelas}`
+                i++       
+            } while (i < linhas)
+            estrelas.innerHTML = linhasEstrelas
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4.c</title>
+</head>
+<body>
+    <h1>Programa Números Perfeitos</h1>
+    <input type="number" id="num">
+    <input type="button" value="Verificar Se É Perfeito" onclick="verificar()">
+    <p id="divisores"></p>
+    <p id="res"></p>
+
+    <script>
+        function verificar(){
+        let num = document.getElementById('num').value
+        let divisores = document.querySelector('p#divisores')
+        let resultados = []
+        let res = document.querySelector('p#res')        
+        
+            //Descobre os divisores de um número e os soma
+            let soma = 0
+            for(let i = 1; i <= num / 2; i++){
+                if (num % i == 0){
+                    resultados.push(i)
+                    soma = soma + i
+                    divisores.textContent = `Divisores de ${num}: ${resultados.toString()} (Soma: ${soma})`
+                }
+            }
+            //Exibe o resultado
+            if (soma == num) {
+                res.textContent = `${num} é um número perfeito.`
+            } else {
+                res.textContent = `${num} não é um número perfeito.`
+            }
+        }
+    </script>
+</body>
+</html>
