@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo 6.3</title>
+  </head>
+  <body>
+    <script>
+      var word = prompt("Palavra: ");
+      var len = word.length;
+      var reverse = word.charAt(len - 1).toUpperCase();
+
+      for (var i = len - 2; i >= 0; i--) {
+      reverse += word.charAt(i).toLowerCase();
+      }
+
+      alert("Palavra: " + word + "\nInvertida: " + reverse);
+    </script>
+  </body>
+</html>
