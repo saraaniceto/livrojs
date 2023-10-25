@@ -35,7 +35,6 @@ function calcularMultaJuros() {
     // 1 dia = 24hor x 60min x 60seg x 1000mseg: 86400000mseg
     // round(): necessário para períodos envolvendo horário de verão
     var dias = Math.round(atraso / 86400000);
-    console.log(atraso / 86400000);
     multa = valor * TAXA_MULTA;
     juros = valor * TAXA_JUROS * dias;
   }
